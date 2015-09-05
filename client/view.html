@@ -57,3 +57,21 @@
       <p><a href="#" id="endCall">End call</a></p>
     </div>
 </template>
+
+<template name="vidChat">
+    <div id="my-video-container">
+      <!-- note the 'autoplay' -->
+      <video id="myVideo" class="myVideo" autoplay></video>
+    </div>
+    <div id="their-video-container">
+      <video id="theirVideo" class="theirVideo" autoplay></video>
+    </div>
+
+    <div>
+      <br>
+      <p style="margin-top: 15%"><span id="myPeerId">...</span></p>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</template>

@@ -18,11 +18,13 @@ button#per_but1 {
 	left: 30px;
 }
 
-button#per_but2 {
-	right: 30px;
+#per_but2 {
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
 }
 
-.btn:active {
+/*.btn:active {
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #da4f49;
@@ -37,6 +39,7 @@ button#per_but2 {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
+*/
 
 .vcenter {
 	display: inline-block;

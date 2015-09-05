@@ -5,6 +5,7 @@ Router.map(function() {
   this.route('view', {
     path: '/view'
   });
+  this.route('video-select', {
+    path: '/video-select'
+  });
 });
-
-

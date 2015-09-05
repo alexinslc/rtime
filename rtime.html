@@ -12,13 +12,10 @@
 </body>
 
 <template name="hello">
-  <button class="btn">Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-  <button type="button" class="btn btn-danger btn-lg vcenter">
+  <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger').addClass('btn-success').text('Ready');">
 	Ready <i class="fa fa-question fa-2x"></i>
   </button>
-  <button type="button" class="btn btn-success btn-lg">
-	Ready <i class="fa fa-check fa-2x"></i>
+  <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success').text('Ready');">Waiting...<i class="fa fa-check fa-2x"></i>
   </button>
   <script>
     $('#background-video').YTPlayer({

@@ -4,6 +4,24 @@ button:after {
 	color: green;
 }
 
+button {
+	width: 120px;
+	height: 50px;
+}
+
+button#per_but1, button#per_but2 {
+	position: fixed;
+	bottom: 30px;
+}
+
+button#per_but1 {
+	left: 30px;
+}
+
+button#per_but2 {
+	right: 30px;
+}
+
 .btn:active {
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);

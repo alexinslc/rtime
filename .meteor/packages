@@ -11,3 +11,6 @@ bootstrap
 fortawesome:fontawesome
 jquery
 hpp:ytbgplayer
+accounts-facebook
+accounts-ui
+service-configuration

@@ -108,6 +108,9 @@ div.content h3 {
   font-weight: 400;
   color: #000;
 }
+.hidden {
+  display: none !important;
+}
 button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;

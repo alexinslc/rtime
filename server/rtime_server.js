@@ -1,13 +1,20 @@
 if (Meteor.isServer) {
   var videoId;
   var timer = 5;
-  var user1 = 0;
-  var user2 = 0;
+  var user1 = "";
+  var user2 = "";
 
   Meteor.startup(function () {
   	Meteor.methods({
       'active': function(uuid) {
-          Active.insert({'uuid': uuid})
+          if (user1 ===""){
+            user1 = uuid;
+            Active.insert({'user1': user1})
+          } else if (user2 === ""){
+            user2 = uuid;
+            Active.insert({'user2': user2})
+          }
+
       },
 
   	  startTimer: function () {

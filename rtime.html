@@ -3,24 +3,27 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
+  <div id='background-video'></div>
+  <div class='container'>
+  <h1>Welcome to Meteor!</h1>
   {{> hello}}
+  </div>
 </body>
 
 <template name="hello">
-
   <button class="btn">Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
-
   <button type="button" class="btn btn-danger btn-lg vcenter">
 	Ready <i class="fa fa-question fa-2x"></i>
   </button>
-
   <button type="button" class="btn btn-success btn-lg">
 	Ready <i class="fa fa-check fa-2x"></i>
   </button>
-
-
-
+  <script>
+    $('#background-video').YTPlayer({
+      fitToBackground: true,
+      videoId: '2-OQhot_ml0'
+    });
+  </script>
 </template>

@@ -33,11 +33,12 @@
 
 <template name="person1">
   <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>
+  <!-- <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but2" onclick = "$('#per_but2').removeClass('btn-danger');" disabled>{{name2}} is ready</button> -->
   <p>{{ready1}}</p>
 </template>
 
 <template name="person2">
-  <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success');">Ready {{name2}}?</button>
+  <div type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success');" disabled>Ready {{name2}}</div>
 </template>
 
 <template name="count_down_timer">

@@ -42,18 +42,6 @@ if (Meteor.isClient) {
       readyCheck();
     }
   });
-
-  function readyCheck (){
-    if(Session.get('ready1') && Session.get('ready2')) {
-      console.log ("They're both ready");
-      player = $('#background-video').data('ytPlayer').player
-      console.log(player);
-
-      player.cueVideoById('b6Evi1A4Oaw');
-      player.playVideo();
-
-    }
-  }
 }
 
 Template.vidChat.events({
@@ -105,5 +93,5 @@ navigator.getUserMedia({audio: true, video: true}, function (stream) {
   //display video
   $('#myVideo').prop('src', URL.createObjectURL(stream));
   window.localStream = stream;
-}, function (error) { console.log(error); }
+  }, function (error) { console.log(error); }
 );

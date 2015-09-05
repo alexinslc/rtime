@@ -43,3 +43,31 @@ button#per_but2 {
 	vertical-align: middle;
 	float: none;
 }
+
+.myVideo {
+	width: 10%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.theirVideo {
+	width: 10%;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+#my-video-container {
+	width: 20%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+#their-video-container {
+	width: 20%;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}

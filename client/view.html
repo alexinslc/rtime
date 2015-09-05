@@ -1,8 +1,4 @@
-<head>
-  <title>rtime</title>
-</head>
-
-<body>
+<template name="view">
   <div id='background-video'></div>
   <div class='container'>
     {{> person1}}
@@ -29,7 +25,7 @@
       }
     });
   </script>
-</body>
+  </template>
 
 <template name="person1">
   <button type="button" class="btn btn-danger btn-md vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>

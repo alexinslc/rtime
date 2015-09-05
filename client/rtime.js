@@ -1,25 +1,12 @@
 if (Meteor.isClient) {
+  var player;
   // Session.set('ready1', "");
   // Session.set('ready2', "");
   Session.set('name1', "Seth");
   Session.set('name2', "Jenna");
   Session.set('ready1',0);
   Session.set('ready2',0);
-
-  // var yt_int, yt_players={},
-  // initYT = function() {
-  //     $(".ytplayer").each(function() {
-  //         yt_players[this.id] = new YT.Player(this.id);
-  //     });
-  // };
-  // $.getScript("//www.youtube.com/player_api", function() {
-  //     yt_int = setInterval(function(){
-  //         if(typeof YT === "object"){
-  //             initYT();
-  //             clearInterval(yt_int);
-  //         }
-  //     },2000 );
-  // });
+  Session.set('count_down', 5);
 
   Template.person1.helpers({
     name1: function () {
@@ -59,7 +46,11 @@ if (Meteor.isClient) {
   function readyCheck (){
     if(Session.get('ready1') && Session.get('ready2')) {
       console.log ("They're both ready");
-      yt_players['player'].playVideo();
+      player = $('#background-video').data('ytPlayer').player
+      console.log(player);
+
+      player.cueVideoById('b6Evi1A4Oaw');
+      player.playVideo();
 
     }
   }

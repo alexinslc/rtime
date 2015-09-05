@@ -14,14 +14,25 @@
   <script>
     $('#background-video').YTPlayer({
       fitToBackground: true,
-      videoId: '2-OQhot_ml0'
+      videoId: 'fuV3R3Ogr9I',
+      mute: 1,
+      autoplay: 0,
+      callback: function(){
+        var player = $('#background-video').data('ytPlayer').player;
+        player.pauseVideo();
+      },
+      playerVars: {
+        modestbranding: 0,
+        controls: 0,
+        showinfo: 0,
+        iv_load_policy: 3
+      }
     });
   </script>
 </body>
 
 <template name="person1">
   <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>
-  <!-- <button id="per_but1"> -->
   <p>{{ready1}}</p>
 </template>
 
@@ -31,13 +42,4 @@
 
 <template name="count_down_timer">
   <div id="timer">{{count_down}}</div>
-</template>
-
-<template name="vidBox">
-  <!-- <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger').addClass('btn-success').text('Ready');">
-	Ready <i class="fa fa-question fa-2x"></i>
-  </button>
-  <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success').text('Ready');">Waiting...<i class="fa fa-check fa-2x"></i>
-  </button> -->
-
 </template>

@@ -1,0 +1,42 @@
+<head>
+  <title>rtime</title>
+</head>
+
+<body>
+  <div id='background-video'></div>
+  <div class='container'>
+    {{> person1}}
+    {{> count_down_timer}}
+    {{> person2}}
+  </div>
+</body>
+
+<template name="person1">
+  <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>
+  <!-- <button id="per_but1"> -->
+  <p>{{ready1}}</p>
+</template>
+
+<template name="person2">
+  <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success');">Ready {{name2}}?</button>
+  <!-- <button id="per_but2" > -->
+  <!-- <p>{{ready2}}</p> -->
+</template>
+
+<template name="count_down_timer">
+  <div id="timer">{{count_down}}</div>
+</template>
+
+<template name="vidBox">
+  <!-- <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger').addClass('btn-success').text('Ready');">
+	Ready <i class="fa fa-question fa-2x"></i>
+  </button>
+  <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success').text('Ready');">Waiting...<i class="fa fa-check fa-2x"></i>
+  </button> -->
+  <script>
+    $('#background-video').YTPlayer({
+      fitToBackground: true,
+      videoId: '2-OQhot_ml0'
+    });
+  </script>
+</template>

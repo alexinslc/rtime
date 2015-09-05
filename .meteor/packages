@@ -15,3 +15,4 @@ iron:router
 accounts-facebook
 accounts-ui
 service-configuration
+iron:router

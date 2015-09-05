@@ -4,11 +4,19 @@
 
 <body>
   <div id='background-video'></div>
+  <!-- <div><iframe id="player" class="ytplayer" width="100%" height="100%" src="http://www.youtube.com/embed/HVhSasnVjMQ?enablejsapi=1&theme=dark&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe></div> -->
   <div class='container'>
     {{> person1}}
     {{> count_down_timer}}
     {{> person2}}
   </div>
+
+  <script>
+    $('#background-video').YTPlayer({
+      fitToBackground: true,
+      videoId: '2-OQhot_ml0'
+    });
+  </script>
 </body>
 
 <template name="person1">
@@ -19,8 +27,6 @@
 
 <template name="person2">
   <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success');">Ready {{name2}}?</button>
-  <!-- <button id="per_but2" > -->
-  <!-- <p>{{ready2}}</p> -->
 </template>
 
 <template name="count_down_timer">
@@ -33,10 +39,5 @@
   </button>
   <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success').text('Ready');">Waiting...<i class="fa fa-check fa-2x"></i>
   </button> -->
-  <script>
-    $('#background-video').YTPlayer({
-      fitToBackground: true,
-      videoId: '2-OQhot_ml0'
-    });
-  </script>
+
 </template>

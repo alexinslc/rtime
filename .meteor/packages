@@ -11,3 +11,4 @@ bootstrap
 fortawesome:fontawesome
 jquery
 hpp:ytbgplayer
+iron:router

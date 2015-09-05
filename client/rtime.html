@@ -9,12 +9,13 @@
     {{> person1}}
     {{> count_down_timer}}
     {{> person2}}
+    {{> vidChat}}
   </div>
 
   <script>
     $('#background-video').YTPlayer({
       fitToBackground: true,
-      videoId: '2-OQhot_ml0'
+      videoId: 'Sagg08DrO5U'
     });
   </script>
 </body>
@@ -40,4 +41,22 @@
   <button type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success').text('Ready');">Waiting...<i class="fa fa-check fa-2x"></i>
   </button> -->
 
+</template>
+
+<template name="vidChat">
+    <div id="my-video-container">
+      <!-- note the 'autoplay' -->
+      <video id="myVideo" class="myVideo" autoplay></video>
+    </div>
+    <div id="their-video-container">
+      <video id="theirVideo" class="theirVideo" autoplay></video>
+    </div>
+
+    <div>
+      <br>
+      <p style="margin-top: 15%"><span id="myPeerId">...</span></p>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
 </template>

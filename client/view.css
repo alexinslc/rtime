@@ -18,8 +18,10 @@ button#per_but1 {
 	left: 30px;
 }
 
-button#per_but2 {
-	right: 30px;
+#per_but2 {
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
 }
 
 /*.btn:active {
@@ -38,3 +40,37 @@ button#per_but2 {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 */
+
+.vcenter {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
+
+.myVideo {
+	width: 10%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.theirVideo {
+	width: 10%;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+#my-video-container {
+	width: 20%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+#their-video-container {
+	width: 20%;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}

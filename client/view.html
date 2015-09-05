@@ -1,0 +1,78 @@
+<template name="view">
+  <div id='background-video'></div>
+  <div class='container'>
+    {{> vidChat}}
+    {{> person1}}
+    {{> count_down_timer}}
+    {{> person2}}
+  </div>
+
+  <script>
+    $('#background-video').YTPlayer({
+      fitToBackground: true,
+      videoId: 'fuV3R3Ogr9I',
+      mute: 1,
+      autoplay: 0,
+      callback: function(){
+        var player = $('#background-video').data('ytPlayer').player;
+        player.pauseVideo();
+      },
+      playerVars: {
+        modestbranding: 0,
+        controls: 0,
+        showinfo: 0,
+        iv_load_policy: 3
+      }
+    });
+  </script>
+</template>
+
+<template name="person1">
+  <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>
+  <!-- <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but2" onclick = "$('#per_but2').removeClass('btn-danger');" disabled>{{name2}} is ready</button> -->
+  <p>{{ready1}}</p>
+</template>
+
+<template name="person2">
+  <div type="button" class="btn btn-lg" id="per_but2" onclick = "$('#per_but2').addClass('btn-success');" disabled>Ready {{name2}}</div>
+</template>
+
+<template name="count_down_timer">
+  <div id="timer">{{count_down}}</div>
+</template>
+
+<template name="vidChat">
+    <div id="my-video-container">
+      <!-- note the 'autoplay' -->
+      <video id="myVideo" class="myVideo" autoplay></video>
+    </div>
+    <div id="their-video-container">
+      <video id="theirVideo" class="theirVideo" autoplay></video>
+    </div>
+
+    <div>
+      <br>
+      <p style="margin-top: 15%"><span id="myPeerId">...</span></p>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</template>
+
+<template name="vidChat">
+    <div id="my-video-container">
+      <!-- note the 'autoplay' -->
+      <video id="myVideo" class="myVideo" autoplay></video>
+    </div>
+    <div id="their-video-container">
+      <video id="theirVideo" class="theirVideo" autoplay></video>
+    </div>
+
+    <div>
+      <br>
+      <p style="margin-top: 15%"><span id="myPeerId">...</span></p>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</template>

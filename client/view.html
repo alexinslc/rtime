@@ -1,14 +1,10 @@
-<head>
-  <title>rtime</title>
-</head>
-
-<body>
+<template name="view">
   <div id='background-video'></div>
   <div class='container'>
+    {{> vidChat}}
     {{> person1}}
     {{> count_down_timer}}
     {{> person2}}
-    {{> vidChat}}
   </div>
 
   <script>
@@ -29,7 +25,7 @@
       }
     });
   </script>
-</body>
+</template>
 
 <template name="person1">
   <button type="button" class="btn btn-danger btn-lg vcenter" id="per_but1" onclick = "$('#per_but1').removeClass('btn-danger');">Ready {{name1}}?</button>
@@ -43,6 +39,24 @@
 
 <template name="count_down_timer">
   <div id="timer">{{count_down}}</div>
+</template>
+
+<template name="vidChat">
+    <div id="my-video-container">
+      <!-- note the 'autoplay' -->
+      <video id="myVideo" class="myVideo" autoplay></video>
+    </div>
+    <div id="their-video-container">
+      <video id="theirVideo" class="theirVideo" autoplay></video>
+    </div>
+
+    <div>
+      <br>
+      <p style="margin-top: 15%"><span id="myPeerId">...</span></p>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
 </template>
 
 <template name="vidChat">
